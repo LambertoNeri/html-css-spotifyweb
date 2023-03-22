@@ -9,6 +9,10 @@ body{
     color: white;
 }
 
+.opacityhalf{                          /*general style*/
+    opacity: 50%;
+}
+
 
 
 header{                               /*Header*/
@@ -65,7 +69,7 @@ main{                                   /*main*/
     padding-bottom: 5rem;
 }
 
-footer{
+footer{                                /*footer*/
     height: 10vh;
     position: fixed;
     bottom: 0;
@@ -73,4 +77,53 @@ footer{
     right: 0;
     z-index: 200;
     background-color: #282828;
+    display: flex;
+    justify-content: space-between;
 }
+
+footer .container{
+    flex: 0 0 33%;
+}
+
+footer .container:first-child{
+    display: flex;
+}
+
+footer .container:first-child ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: center;
+}
+
+footer .container:first-child img{
+    width: 50px;
+}
+
+footer .container:first-child a{
+    text-decoration: none;
+    color: white;
+}
+
+footer .container:first-child .small-font-size{
+    font-size: 0.7rem;
+    vertical-align: text-top;
+}
+
+footer .container:first-child li{
+    margin-left: 1rem;
+}
+
+footer .container:first-child .font-size{
+    font-size: .9rem;
+    margin-left: .6rem;
+}
+
+footer .container:first-child .marginline{
+    margin-left: 3rem;
+}
+
+
+
+
+
