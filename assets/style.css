@@ -3,3 +3,43 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+header{                               /*Header*/
+    background-color: black;
+    height: 10vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    opacity: 30%;
+}
+
+nav{                                  /*nav */
+    width: 13rem;
+    background-color: black;
+    height: 90vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+main{                                   /*main*/
+    overflow: auto;
+    background-color: #141922;
+    height: 90vh;
+    padding-top: 12vh;
+    padding-bottom: 12vh;
+    padding-left: 14rem;
+
+}
+
+footer{
+    height: 10vh;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    background-color: #282828;
+}
