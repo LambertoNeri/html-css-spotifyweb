@@ -87,7 +87,29 @@ nav{                                  /*nav */
     z-index: 100;
 }
 
+nav .container{
+   display: flex;
+   justify-content: start;
+   margin-top: 1rem;
+}
 
+nav .container .fa-spotify {
+    font-size: 3rem;
+}
+
+.spotispan{
+    font-size: 1.8rem;
+    display: inline-block;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    font-weight: 600;
+}
+
+.fa-registered{
+    font-size: .5rem;
+    margin-top: 1rem;
+    margin-left: 0.2rem;
+}
 
 
 
