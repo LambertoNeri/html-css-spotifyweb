@@ -250,7 +250,7 @@ footer .container-one .small-font-size{
 }
 
 footer .container-one li{
-    margin-left: 0.8rem;
+    margin-left: 0.5rem;
 }
 
 footer .container-one .font-size{
@@ -259,7 +259,7 @@ footer .container-one .font-size{
 }
 
 footer .container-one .marginline{
-    margin-left: 1.2rem;
+    margin-left: .5rem;
 }
 
 
@@ -287,7 +287,8 @@ footer .container-one .marginline{
 }
 
 .smaller-container-top li{
-    margin-left: 2.5rem;
+    margin-left: 1rem;
+    flex: auto;
 }
  .smaller-container-top li:first-child{
      margin-left: 0;
@@ -327,7 +328,7 @@ footer .container-one .marginline{
 }
 
 .smaller-container-bottom .barra{
-    flex-grow: 1;
+    width: 100%;
     border-radius: 10px;
     height: 5px;
     background-color: #5A5A5A;
@@ -373,7 +374,7 @@ footer .container-one .marginline{
 }
 
 .container-three .barra{
-    width: 100%;
+    min-width: 100px;
     border-radius: 10px;
     height: 5px;
     background-color: #5A5A5A;
