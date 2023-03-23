@@ -47,6 +47,10 @@ ul{
     object-fit: contain;
 }
 
+.padding-top{
+    padding-top: .9rem;
+}
+
 
 header{                               /*Header*/
     background-color: rgb(0, 0, 0, .3);
@@ -109,7 +113,7 @@ nav .header-nav .fa-spotify {
 .fa-registered{
     font-size: .5rem;
     margin-top: 1rem;
-    margin-left: 0.2+rem;
+    margin-left: 0.2rem;
 }
 
 nav .container{
@@ -146,6 +150,67 @@ nav .container .lateral-line::before{
     background-color: #99E22D;
 }
 
+.playlist-title{
+    font-size: 0.9rem;
+    margin-left: 1rem;
+}
+
+nav .font-size{
+    font-size: 2.5rem;
+    padding-left: 1rem;
+}
+
+nav .font-smaller{
+    font-size: 0.8rem;
+}
+
+nav .hide li{
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.nav-footer{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 30%;
+    justify-content: end;
+    align-items: start;
+    margin-inline: auto;
+}
+
+.align img{
+    width: 15px;
+}
+
+.nav-footer .align{
+    width: 100%;
+    border-bottom: 1px solid rgb(255, 255, 255, .5);
+    height: 1.5rem;
+}
+
+.nav-footer .install{
+    vertical-align: text-top;
+    margin-left: 0.2rem;
+}
+
+.nav-footer .cosimo img{
+    width: 20px;
+    background-color: #838383;
+    border-radius: 50px;
+}
+
+.nav-footer .cosimo{
+    padding-top: 1rem;
+}
+
+.nav-footer .cosimo span{
+    vertical-align: super;
+    margin-left: 0.2rem;
+    font-size: 0.9rem;
+}
+    
+
 
 
 
@@ -175,6 +240,20 @@ nav .container .lateral-line::before{
 
     nav .container .home img{
         margin-left: 0;
+    }
+
+    .nav-footer .align{
+        border: none;
+    }
+
+    .nav-footer{
+        height: 70%;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-footer .align img{
+        margin-left: 0.6rem;
     }
 }
 
@@ -277,7 +356,11 @@ main .sottotitolo{
     font-size: 0.9rem;
 }
 
-/* width: calc((100% - 5 * var(--gap)) / var(--cols)); */
+@media (max-width: 552px){
+    main{
+        padding-left: 5rem;
+    }
+}
 
 footer{                                /*footer*/
     height: 6rem;
