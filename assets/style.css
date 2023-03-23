@@ -7,6 +7,7 @@
 body{
     font-family: 'Roboto', sans-serif;
     color: white;
+    overflow: auto;
 }
 
 .opacityhalf{                          /*general style*/
@@ -108,7 +109,7 @@ nav .container .fa-spotify {
 .fa-registered{
     font-size: .5rem;
     margin-top: 1rem;
-    margin-left: 0.2rem;
+    margin-left: 0.2+rem;
 }
 
 
@@ -282,6 +283,7 @@ footer .container-one .marginline{
     display: flex;
     flex-direction: row;
     margin-top: 0.5rem;
+    flex: 1 1 auto;
 }
 
 .smaller-container-top li{
@@ -293,7 +295,7 @@ footer .container-one .marginline{
 
 .smaller-container-top .round-border{
     border: 2px white solid;
-    border-radius: 200px;
+    border-radius: 20px;
     padding-right: .35rem;
     padding-left: .5rem;
     padding-top: 0.15rem;
@@ -304,10 +306,12 @@ footer .container-one .marginline{
 .smaller-container-bottom{
     display: flex;
     align-items: start;
+    width: 100%;
 
 }
 
 .smaller-container-bottom ul{
+    width: 100%;
     display: flex;
     flex-direction: row;
     margin-top: 0.3rem;
@@ -318,27 +322,33 @@ footer .container-one .marginline{
     margin-right: 1rem;
 }
 
+.special-item{
+    flex-grow: 1;
+}
+
 .smaller-container-bottom .barra{
-    width: 500px;
+    flex-grow: 1;
     border-radius: 10px;
     height: 5px;
     background-color: #5A5A5A;
     margin-top: 0.3rem;
+    position: relative;
+}
+
+.smaller-container-bottom .barra::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    width: 20%;
+    background-color: white;
+    z-index: 200;
+    border-radius: 100px;
 }
 
 .smaller-container-bottom .font-smaller{
     font-size: 0.7rem;
-}
-
-.smaller-container-bottom .barra-two{
-    width: 100px;
-    border-radius: 10px;
-    height: 5px;
-    background-color: #ffffff;
-    opacity: 50%;
-    position: absolute;
-    top: 0.3rem;
-    left: 2.4rem;
 }
 
 
@@ -354,7 +364,8 @@ footer .container-one .marginline{
     flex-direction: row;
     margin-right: 2rem;
     position: relative;
-
+    width: 100%;
+    max-width: 200px;
 }
 
 .container-three li{
@@ -362,28 +373,30 @@ footer .container-one .marginline{
 }
 
 .container-three .barra{
-    width: 130px;
+    width: 100%;
     border-radius: 10px;
     height: 5px;
     background-color: #5A5A5A;
     margin-top: 0.5rem;
+    position: relative;
+}
+
+.container-three .barra::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    width: 30%;
+    z-index: 200;
+    background-color: white;
+    border-radius: 10px;
 }
 
 .container-three a{
     color: white;
-    font-size: .8rem;
-}
-
-.container-three .barra-two{
-    width: 45px;
-    border-radius: 10px;
-    height: 5px;
-    background-color: white;
-    margin-top: 0.5rem;
-    position: absolute;
-    top: 0;
-    right: 6.3rem;
-    opacity: 50%;
+    opacity: 90%;
+    font-size: .9rem;
 }
 
 
