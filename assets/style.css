@@ -17,6 +17,34 @@ ul{
     list-style: none;
 }
 
+.margin-top-four{
+    margin-top: 4rem;
+}
+
+.margin-top-three{
+    margin-top: 3rem;
+}
+
+.margin-top-two{
+    margin-top: 2rem;
+}
+
+.margin-top-one{
+    margin-top: 1rem;
+}
+
+.margin-top-half{
+    margin-top: .5rem;
+}
+
+.inline-block{
+    display: inline-block;
+}
+
+.round{
+    border-radius: 200px;
+    object-fit: contain;
+}
 
 
 header{                               /*Header*/
@@ -73,6 +101,91 @@ main{                                   /*main*/
     padding-bottom: 5rem;
 }
 
+.main-navbar{
+    display: flex;
+    flex-direction: column;
+}
+
+.main-navbar ul{
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.main-navbar li{
+    margin-left: 1rem;
+}
+
+.main-navbar li a{
+    text-decoration: none;
+    color: white;
+    font-size: .8rem;
+    opacity: 50%;
+}
+
+.main-navbar .underlined{
+    position: relative;
+}
+
+.main-navbar .underlined::after{
+    content: "";
+    position: absolute;
+    left: 25px;
+    bottom: -2px;
+    height: 2px;
+    width: 40%;
+    background-color: #99E22D;
+}
+
+
+.grid-one{
+    --cols: 6;
+    --gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+    
+}
+
+.grid-one .card{
+    flex: 0 0 calc((100% - 5 * var(--gap)) / var(--cols));
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+.grid-one .card .album-pic{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.grid-one .card .album-pic img{
+    width: 200px;
+}
+
+.grid-one .card .title{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+    align-items: center;
+    padding-inline: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.grid-one .card .title span{
+    margin-top: .5rem;
+    opacity: 50%;
+    font-size: 0.8rem;
+}
+
+main .sottotitolo{
+    font-size: 0.9rem;
+}
+
+/* width: calc((100% - 5 * var(--gap)) / var(--cols)); */
+
 footer{                                /*footer*/
     height: 10vh;
     position: fixed;
@@ -86,7 +199,7 @@ footer{                                /*footer*/
 }
 
 footer .container-one, .container-two, .container-three{
-    flex: 0 0 33%;
+    flex: 0 1 33%;
 }
 
 footer .container-one{                  /*container one footer */
@@ -134,7 +247,7 @@ footer .container-one .marginline{
 }
 
 .container-two .smaller-container-top, .smaller-container-bottom{
-    flex: 0 0 50%;
+    flex: 0 1 50%;
     display: flex;
     align-items: center;
 }
@@ -205,6 +318,8 @@ footer .container-one .marginline{
     top: 0.3rem;
     left: 2.4rem;
 }
+
+
 
 .container-three{                             /*container three footer */
     display: flex;
