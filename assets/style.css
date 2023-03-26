@@ -56,6 +56,7 @@ header{                               /*Header*/
     background-color: rgb(0, 0, 0, .3);
     height: 6rem;
     position: fixed;
+    z-index: 150;
     left: 0;
     top: 0;
     right: 0;
@@ -73,6 +74,18 @@ header a{
     color: white;
     opacity: 100%;
     font-size: 0.8rem;
+}
+
+header a:hover{
+    border: 2px white solid;
+    border-radius: 50px;
+    padding-inline: 4.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    text-decoration: none;
+    color: white;
+    opacity: 100%;
+    font-size: 1rem;
 }
 
 header .container{
@@ -96,6 +109,8 @@ nav .header-nav{
    display: flex;
    justify-content: start;
    margin-top: 1rem;
+   position: relative;
+   z-index: 100;
 }
 
 nav .header-nav .fa-spotify {
@@ -120,6 +135,8 @@ nav .container{
     display: flex;
     flex-direction: column;
     margin-top: 3rem;
+    position: relative;
+    z-index: 100;
 }
 
 nav .container .home{
@@ -128,6 +145,7 @@ nav .container .home{
     flex: 0 0 calc(100% / 2 - 1rem);
     gap: 0.5rem;
     position: relative;
+    cursor: pointer;
 }
 
 nav .container .home img{
@@ -139,6 +157,14 @@ nav .container .home span{
     margin-top: 0.5rem;
 }
 
+nav .container .home:hover span{
+    opacity: 100%;
+}
+
+nav .container .home:hover img{
+    opacity: 100%;
+}
+
 nav .container .lateral-line::before{
     content: "";
     position: absolute;
@@ -146,7 +172,7 @@ nav .container .lateral-line::before{
     bottom: 0;
     height: 2rem;
     width: 4px;
-    z-index: 200;
+    z-index: 190;
     background-color: #99E22D;
 }
 
@@ -169,14 +195,25 @@ nav .hide li{
     margin-left: 1rem;
 }
 
+nav .hide li:hover{
+    opacity: 100%;
+    cursor: pointer;
+}
+
+
+
 .nav-footer{
     display: flex;
     flex-direction: column;
-    width: 80%;
-    height: 30%;
+    width: 9%;
+    position: fixed;
+    left: 1rem;
+    bottom: 6rem;
     justify-content: end;
     align-items: start;
     margin-inline: auto;
+    z-index: 100;
+    background-color: #000000;
 }
 
 .align img{
@@ -192,6 +229,16 @@ nav .hide li{
 .nav-footer .install{
     vertical-align: text-top;
     margin-left: 0.2rem;
+}
+
+.nav-footer .install:hover{
+    cursor: pointer;
+    opacity: 100%;
+}
+
+.nav-footer .align:hover img{
+    cursor: pointer;
+    opacity: 100%;
 }
 
 .nav-footer .cosimo img{
@@ -247,13 +294,9 @@ nav .hide li{
     }
 
     .nav-footer{
-        height: 70%;
-        display: flex;
-        align-items: center;
-    }
+        left: 1rem;
+        width: 5%;
 
-    .nav-footer .align img{
-        margin-left: 0.6rem;
     }
 }
 
@@ -289,6 +332,10 @@ main{                                   /*main*/
     color: white;
     font-size: .8rem;
     opacity: 50%;
+}
+
+.main-navbar li a:hover{
+    opacity: 100%;
 }
 
 .main-navbar .underlined{
@@ -330,6 +377,23 @@ main{                                   /*main*/
     width: 100%;
     display: flex;
     justify-content: center;
+    position: relative;
+}
+
+.fa-circle-play{
+    position: absolute;
+    font-size: 3rem;
+    top: 39%;
+    left: 39%;
+    visibility: hidden;
+}
+
+.card:hover{
+    cursor: pointer;
+}
+
+.card:hover  .fa-circle-play{
+    visibility: visible;
 }
 
 .grid-one .card .album-pic img{
@@ -415,6 +479,16 @@ footer .container-one .marginline{
     margin-left: .5rem;
 }
 
+footer .container-one span:hover{
+    opacity: 100%;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+footer .container-one a:hover{
+    opacity: 100%;
+}
+
 
 .container-two{                                     /*container two footer */
     display: flex;
@@ -437,8 +511,37 @@ footer .container-one .marginline{
     flex-direction: row;
     margin-top: 0.5rem;
     flex: 1 1 auto;
+    position: relative;
+    justify-content: space-between;
 }
 
+.smaller-container-top ul .absolute{
+    border: 2px white solid;
+    border-radius: 20px;
+    padding-right: .5rem;
+    padding-left: .7rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 36%;
+    top: -34%;
+    display: none;
+}
+
+.smaller-container-top ul .relative:hover .ciao{
+    opacity: 0%;
+}
+
+.smaller-container-top ul .relative:hover .absolute{
+    display: block;
+}
+
+.smaller-container-top ul .relative:hover{
+    cursor: pointer;
+}
+
+   
 .smaller-container-top li{
     margin-left: 1rem;
     flex: auto;
@@ -456,6 +559,7 @@ footer .container-one .marginline{
     padding-bottom: 0.15rem;
     font-size: 1.3rem;
 }
+
 
 .smaller-container-bottom{
     display: flex;
@@ -489,6 +593,7 @@ footer .container-one .marginline{
     position: relative;
 }
 
+
 .smaller-container-bottom .barra::after{
     content: "";
     position: absolute;
@@ -497,8 +602,30 @@ footer .container-one .marginline{
     height: 5px;
     width: 20%;
     background-color: white;
-    z-index: 200;
+    z-index: 220;
     border-radius: 100px;
+}
+
+.smaller-container-bottom .barra:hover::after{
+    background-color: #99E22D;
+    cursor: pointer;
+}
+
+.smaller-container-bottom .barra::before{
+    content: "";
+    position: absolute;
+    left: 20%;
+    bottom: -5.2px;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50px;
+    z-index: 220;
+    display: none;
+}
+
+.smaller-container-bottom .barra:hover::before{
+    display: block;
 }
 
 .smaller-container-bottom .font-smaller{
@@ -542,7 +669,7 @@ footer .container-one .marginline{
     bottom: 0;
     height: 5px;
     width: 30%;
-    z-index: 200;
+    z-index: 220;
     background-color: white;
     border-radius: 10px;
 }
@@ -552,6 +679,4 @@ footer .container-one .marginline{
     opacity: 90%;
     font-size: .9rem;
 }
-
-
 
